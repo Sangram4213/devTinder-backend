@@ -48,6 +48,7 @@ const userSchema = new mongoose.Schema(
     },
     photoUrl: {
       type: String,
+      default:"https://banner2.cleanpng.com/20180404/sqe/avhxkafxo.webp",
       validate(value) {
         if (!validator.isURL(value)) {
           throw new Error("PhotoUrl is not valid");
